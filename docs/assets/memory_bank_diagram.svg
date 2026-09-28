@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1448 508" width="1448" height="508" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+  <rect x="0" y="0" width="1448" height="508" fill="#0e1117"/>
+  <g transform="translate(24,24)">
+  <defs>
+    <marker id="ats-arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <style>
+    .ats-box-title { font: bold 24px -apple-system, Segoe UI, sans-serif; fill: #ffffff; }
+    .ats-box-sub   { font: 15px -apple-system, Segoe UI, sans-serif; fill: rgba(255,255,255,0.88); }
+    .ats-title-sm  { font: bold 18px -apple-system, Segoe UI, sans-serif; fill: #ffffff; }
+    .ats-sub-sm    { font: 13px -apple-system, Segoe UI, sans-serif; fill: rgba(255,255,255,0.88); }
+    .ats-title-xs  { font: bold 15px -apple-system, Segoe UI, sans-serif; fill: #ffffff; }
+    .ats-sub-xs    { font: 11.5px -apple-system, Segoe UI, sans-serif; fill: rgba(255,255,255,0.88); }
+    .ats-container-label { font: bold 18px -apple-system, Segoe UI, sans-serif; fill: #d1d5db; letter-spacing: 1px; }
+    .ats-layer-label { font: italic 14px -apple-system, Segoe UI, sans-serif; fill: #9ca3af; }
+    .ats-arrow-line2 { stroke: #9ca3af; stroke-width: 2; marker-end: url(#ats-arrow2); }
+  </style>
+  <!-- Traces -> Memory Bank -->
+  <line x1="180" y1="220" x2="228" y2="220" class="ats-arrow-line2"/>
+  <!-- Memory Bank -> RAG -->
+  <line x1="1172" y1="220" x2="1208" y2="220" class="ats-arrow-line2"/>
+  <!-- query -> RAG -->
+  <line x1="1295" y1="114" x2="1295" y2="148" class="ats-arrow-line2"/>
+  <!-- Traces (left) -->
+  <rect x="10" y="150" width="170" height="140" rx="10" fill="#64748b"/>
+  <text x="95" y="192" text-anchor="middle" class="ats-box-title">Traces</text>
+  <text x="95" y="220" text-anchor="middle" class="ats-box-sub">Claude Code</text>
+  <text x="95" y="239" text-anchor="middle" class="ats-box-sub">Gemini CLI</text>
+  <text x="95" y="258" text-anchor="middle" class="ats-box-sub">OpenCode</text>
+  <!-- Memory Bank container -->
+  <rect x="230" y="20" width="940" height="400" rx="14" fill="rgba(255,255,255,0.03)" stroke="#6b7280" stroke-width="2" stroke-dasharray="8,5"/>
+  <text x="250" y="45" class="ats-container-label">MEMORY BANK</text>
+  <text x="250" y="66" class="ats-layer-label">Extraction — one combined LLM call per chunk, every type kept separate</text>
+  <!-- Entities (tall, spans both extraction rows) -->
+  <rect x="260" y="75" width="150" height="180" rx="8" fill="#0ea5e9"/>
+  <text x="335" y="110" text-anchor="middle" class="ats-title-sm">Entities</text>
+  <text x="335" y="138" text-anchor="middle" class="ats-sub-sm">files · commits</text>
+  <text x="335" y="158" text-anchor="middle" class="ats-sub-sm">PRs · packages</text>
+  <text x="335" y="178" text-anchor="middle" class="ats-sub-sm">errors · concepts</text>
+  <!-- Memory types row -->
+  <rect x="430" y="75" width="140" height="85" rx="8" fill="#3b82f6"/>
+  <text x="500" y="113" text-anchor="middle" class="ats-title-sm">Episodic</text>
+  <text x="500" y="135" text-anchor="middle" class="ats-sub-sm">what happened</text>
+  <rect x="585" y="75" width="140" height="85" rx="8" fill="#10b981"/>
+  <text x="655" y="113" text-anchor="middle" class="ats-title-sm">Procedural</text>
+  <text x="655" y="135" text-anchor="middle" class="ats-sub-sm">how it was done</text>
+  <rect x="740" y="75" width="140" height="85" rx="8" fill="#f59e0b"/>
+  <text x="810" y="113" text-anchor="middle" class="ats-title-sm">Semantic</text>
+  <text x="810" y="135" text-anchor="middle" class="ats-sub-sm">facts learned</text>
+  <!-- Pattern types row -->
+  <rect x="430" y="170" width="107" height="85" rx="8" fill="#8b5cf6"/>
+  <text x="483" y="208" text-anchor="middle" class="ats-title-xs">Strategy</text>
+  <text x="483" y="228" text-anchor="middle" class="ats-sub-xs">approach used</text>
+  <rect x="547" y="170" width="107" height="85" rx="8" fill="#ec4899"/>
+  <text x="600" y="208" text-anchor="middle" class="ats-title-xs">Decision</text>
+  <text x="600" y="228" text-anchor="middle" class="ats-sub-xs">tradeoffs made</text>
+  <rect x="664" y="170" width="107" height="85" rx="8" fill="#ef4444"/>
+  <text x="717" y="208" text-anchor="middle" class="ats-title-xs">Recovery</text>
+  <text x="717" y="228" text-anchor="middle" class="ats-sub-xs">stuck → fixed</text>
+  <rect x="781" y="170" width="107" height="85" rx="8" fill="#f97316"/>
+  <text x="834" y="208" text-anchor="middle" class="ats-title-xs">Wasteful</text>
+  <text x="834" y="228" text-anchor="middle" class="ats-sub-xs">wasted effort</text>
+  <text x="250" y="288" class="ats-layer-label">Consolidation — across chunks and sessions, via HDBSCAN clustering</text>
+  <!-- Consolidation row -->
+  <rect x="260" y="300" width="395" height="95" rx="8" fill="#a855f7"/>
+  <text x="457" y="338" text-anchor="middle" class="ats-box-title" font-size="20">Memory Themes</text>
+  <text x="457" y="363" text-anchor="middle" class="ats-box-sub">Recurring patterns consolidated</text>
+  <text x="457" y="382" text-anchor="middle" class="ats-box-sub">across many sessions</text>
+  <rect x="675" y="300" width="395" height="95" rx="8" fill="#14b8a6"/>
+  <text x="872" y="338" text-anchor="middle" class="ats-box-title" font-size="20">Session Clusters</text>
+  <text x="872" y="363" text-anchor="middle" class="ats-box-sub">Interaction-shape types from</text>
+  <text x="872" y="382" text-anchor="middle" class="ats-box-sub">structural embeddings</text>
+  <!-- RAG (right) -->
+  <rect x="1210" y="150" width="170" height="140" rx="10" fill="#6366f1"/>
+  <text x="1295" y="192" text-anchor="middle" class="ats-box-title">RAG</text>
+  <text x="1295" y="225" text-anchor="middle" class="ats-box-sub">Retrieval +</text>
+  <text x="1295" y="248" text-anchor="middle" class="ats-box-sub">answer generation</text>
+  <text x="1295" y="105" text-anchor="middle" class="ats-layer-label">user / agent query</text>
+
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Databases (contain your own session traces — never commit)
+*.db
+*.db-shm
+*.db-wal
+
+# Local data and user-generated annotations (contain raw trace content)
+data/
+annotations/
+labeled_*.html
+labeled_*.json
+
+# Experiments: track scripts and write-ups only — outputs contain raw trace text
+experiments/**/*.json
+experiments/**/*.html
+experiments/**/*.npz
+experiments/**/*.log
+experiments/**/*.txt
+experiments/deprecated_*
+
+# Internal working docs
+notes/TODO.md
+notes/MEMORY.md
+review/
+docs/superpowers/
+docs/PROJECT_WRITEUP.md
+
+# demo — track source, exclude build artifacts and dependencies
+demo/node_modules/
+demo/out/
+demo/.cache/
+
+# Tooling / OS / editor
+.claude/
+.DS_Store
+.idea/
+.vscode/
+*.swp
+# Raw chunk dumps (contain verbatim trace text)
+experiments/exp01_results/results.md
+experiments/exp02_results/results.md
+experiments/exp05_results/results.md
+experiments/exp03_results/results_v0.md

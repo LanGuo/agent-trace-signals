@@ -1,0 +1,58 @@
+<svg viewBox="0 0 1448 268" width="1448" height="268" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+  <rect x="0" y="0" width="1448" height="268" fill="#0e1117"/>
+  <g transform="translate(24,24)">
+  <defs>
+    <marker id="ats-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#9ca3af"/>
+    </marker>
+  </defs>
+  <style>
+    .ats-box-title { font: bold 24px -apple-system, Segoe UI, sans-serif; fill: #ffffff; }
+    .ats-box-sub   { font: 15px -apple-system, Segoe UI, sans-serif; fill: rgba(255,255,255,0.88); }
+    .ats-arrow-line { stroke: #9ca3af; stroke-width: 2; marker-end: url(#ats-arrow); }
+  </style>
+  <!-- connecting arrows -->
+  <line x1="220" y1="110" x2="258" y2="110" class="ats-arrow-line"/>
+  <line x1="458" y1="110" x2="496" y2="110" class="ats-arrow-line"/>
+  <line x1="696" y1="110" x2="734" y2="110" class="ats-arrow-line"/>
+  <line x1="934" y1="110" x2="972" y2="110" class="ats-arrow-line"/>
+  <line x1="1172" y1="110" x2="1210" y2="110" class="ats-arrow-line"/>
+  <!-- 1. Traces -->
+  <rect x="10" y="40" width="210" height="140" rx="10" fill="#64748b"/>
+  <text x="115" y="92" text-anchor="middle" class="ats-box-title">Traces</text>
+  <text x="115" y="120" text-anchor="middle" class="ats-box-sub">Claude Code</text>
+  <text x="115" y="139" text-anchor="middle" class="ats-box-sub">Gemini CLI</text>
+  <text x="115" y="158" text-anchor="middle" class="ats-box-sub">OpenCode</text>
+  <!-- 2. Ingest -->
+  <rect x="258" y="40" width="200" height="140" rx="10" fill="#3b82f6"/>
+  <text x="358" y="92" text-anchor="middle" class="ats-box-title">Ingest</text>
+  <text x="358" y="120" text-anchor="middle" class="ats-box-sub">Combined prompt: 1</text>
+  <text x="358" y="139" text-anchor="middle" class="ats-box-sub">LLM call/chunk → summary</text>
+  <text x="358" y="158" text-anchor="middle" class="ats-box-sub">+ entities + memories</text>
+  <!-- 3. Embed -->
+  <rect x="496" y="40" width="200" height="140" rx="10" fill="#8b5cf6"/>
+  <text x="596" y="92" text-anchor="middle" class="ats-box-title">Embed</text>
+  <text x="596" y="120" text-anchor="middle" class="ats-box-sub">Semantic (content)</text>
+  <text x="596" y="139" text-anchor="middle" class="ats-box-sub">+ structural</text>
+  <text x="596" y="158" text-anchor="middle" class="ats-box-sub">(tool-call rhythm)</text>
+  <!-- 4. Cluster -->
+  <rect x="734" y="40" width="200" height="140" rx="10" fill="#10b981"/>
+  <text x="834" y="92" text-anchor="middle" class="ats-box-title">Cluster</text>
+  <text x="834" y="120" text-anchor="middle" class="ats-box-sub">HDBSCAN: session</text>
+  <text x="834" y="139" text-anchor="middle" class="ats-box-sub">types + cross-session</text>
+  <text x="834" y="158" text-anchor="middle" class="ats-box-sub">memory consolidation</text>
+  <!-- 5. Retrieve -->
+  <rect x="972" y="40" width="200" height="140" rx="10" fill="#f59e0b"/>
+  <text x="1072" y="92" text-anchor="middle" class="ats-box-title">Retrieve</text>
+  <text x="1072" y="120" text-anchor="middle" class="ats-box-sub">Hybrid BM25 +</text>
+  <text x="1072" y="139" text-anchor="middle" class="ats-box-sub">semantic search</text>
+  <text x="1072" y="158" text-anchor="middle" class="ats-box-sub">(RRF fusion)</text>
+  <!-- 6. Serve -->
+  <rect x="1210" y="40" width="180" height="140" rx="10" fill="#06b6d4"/>
+  <text x="1300" y="92" text-anchor="middle" class="ats-box-title">Serve</text>
+  <text x="1300" y="120" text-anchor="middle" class="ats-box-sub">MCP server →</text>
+  <text x="1300" y="139" text-anchor="middle" class="ats-box-sub">back into your</text>
+  <text x="1300" y="158" text-anchor="middle" class="ats-box-sub">coding agent</text>
+
+  </g>
+</svg>

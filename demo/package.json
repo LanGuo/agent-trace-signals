@@ -1,0 +1,19 @@
+{
+  "name": "ats-demo",
+  "version": "1.0.0",
+  "description": "Demo video for Agent Trace Signals",
+  "scripts": {
+    "start": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx AtsDemo out/demo.mp4 --codec h264"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "remotion": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.16",
+    "typescript": "^6.0.3"
+  }
+}
