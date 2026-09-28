@@ -2,6 +2,10 @@
 
 Memory analytics layer for coding agent sessions. Ingests traces from Claude Code (`~/.claude/projects/`), Gemini CLI (`~/.gemini/tmp/`), and Opencode (`~/.local/share/opencode/opencode.db`), extracts entities and memories, stores everything in a local SQLite database with vector embeddings, and serves memories back to Claude Code via MCP. Runs entirely offline via Ollama.
 
+## Demo
+
+[![Agent Trace Signals demo video](https://img.youtube.com/vi/qE-sChbI6hw/maxresdefault.jpg)](https://youtu.be/qE-sChbI6hw)
+
 ## Architecture
 
 ![Pipeline: Traces → Ingest → Embed → Cluster → Retrieve → Serve](docs/assets/pipeline_diagram.svg)
